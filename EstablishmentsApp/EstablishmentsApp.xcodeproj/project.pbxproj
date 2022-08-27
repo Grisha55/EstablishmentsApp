@@ -21,6 +21,7 @@
 		BE4793D628B957DC006EAC7E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BE4793D528B957DC006EAC7E /* FirebaseFirestore */; };
 		BE4793D828B957DC006EAC7E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE4793D728B957DC006EAC7E /* FirebaseFirestoreSwift */; };
 		BE4793DA28B957DC006EAC7E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BE4793D928B957DC006EAC7E /* FirebaseStorage */; };
+		BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584828BA04A80009DCFF /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BE4793C028B952D4006EAC7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE4793C228B952D4006EAC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4793C828B95564006EAC7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BEA7584828BA04A80009DCFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				BE4793BF28B952D4006EAC7E /* LaunchScreen.storyboard */,
 				BE4793C828B95564006EAC7E /* GoogleService-Info.plist */,
 				BE4793C228B952D4006EAC7E /* Info.plist */,
+				BEA7584828BA04A80009DCFF /* AuthManager.swift */,
 			);
 			path = EstablishmentsApp;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4793B928B952D2006EAC7E /* RegistrationViewController.swift in Sources */,
+				BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */,
 				BE4793B528B952D2006EAC7E /* AppDelegate.swift in Sources */,
 				BE4793B728B952D2006EAC7E /* SceneDelegate.swift in Sources */,
 			);
