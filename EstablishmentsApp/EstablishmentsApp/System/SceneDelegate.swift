@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       window?.rootViewController = navVC
     }
     else {
-      window?.rootViewController = EstablishmentsViewController()
+      window?.rootViewController = UINavigationController(rootViewController: RegistrationViewController())
     }
     
     window?.makeKeyAndVisible()

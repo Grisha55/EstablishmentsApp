@@ -10,6 +10,8 @@ import UIKit
 class SMSCodeViewController: UIViewController {
 
   // MARK: - Properties
+  var alertsBuilder = AlertsBuilder()
+  
   private var timer: Timer?
   private var countDown = 120
   private var phoneNumber: String?
@@ -103,7 +105,8 @@ class SMSCodeViewController: UIViewController {
   func sendAgainButtonAction() {
     AuthManager.shared.startAuth(phoneNumber: phoneNumber ?? "") { [weak self] (success) in
       guard success else {
-        // TODO: Show Alert
+        guard let alert = self?.alertsBuilder.buildCancelAlert(with: "Ошибка, связанная с номером телефона", handler: nil) else { return }
+        self?.present(alert, animated: true, completion: nil)
         return
       }
       self?.countDown = 120
@@ -129,7 +132,8 @@ class SMSCodeViewController: UIViewController {
     customTextField.didEnterLastDigit = { [weak self] (code) in
       AuthManager.shared.verifyCode(smsCode: code) { success in
         guard success else {
-          // TODO: Show Alert
+          guard let alert = self?.alertsBuilder.buildCancelAlert(with: "Неправильный код", handler: nil) else { return }
+          self?.present(alert, animated: true, completion: nil)
           return
         }
         
