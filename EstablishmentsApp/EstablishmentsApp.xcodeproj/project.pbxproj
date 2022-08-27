@@ -24,6 +24,7 @@
 		BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584828BA04A80009DCFF /* AuthManager.swift */; };
 		BEA7584B28BA0A520009DCFF /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */; };
 		BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */; };
+		BEA7584F28BA31350009DCFF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584E28BA31350009DCFF /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BEA7584828BA04A80009DCFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsViewController.swift; sourceTree = "<group>"; };
+		BEA7584E28BA31350009DCFF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				BE4793C828B95564006EAC7E /* GoogleService-Info.plist */,
 				BE4793C228B952D4006EAC7E /* Info.plist */,
 				BEA7584828BA04A80009DCFF /* AuthManager.swift */,
+				BEA7584E28BA31350009DCFF /* CustomTextField.swift */,
 			);
 			path = EstablishmentsApp;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				BE4793B928B952D2006EAC7E /* RegistrationViewController.swift in Sources */,
 				BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */,
 				BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */,
+				BEA7584F28BA31350009DCFF /* CustomTextField.swift in Sources */,
 				BE4793B528B952D2006EAC7E /* AppDelegate.swift in Sources */,
 				BE4793B728B952D2006EAC7E /* SceneDelegate.swift in Sources */,
 			);
