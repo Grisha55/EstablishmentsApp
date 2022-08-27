@@ -59,6 +59,7 @@ class RegistrationViewController: UIViewController {
   
   private func setupTakeCodeButton() {
     view.addSubview(takeCodeButton)
+    takeCodeButton.addTarget(self, action: #selector(takeCodeButtonAction), for: .touchUpInside)
     takeCodeButton.translatesAutoresizingMaskIntoConstraints = false
     takeCodeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     takeCodeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
@@ -66,8 +67,33 @@ class RegistrationViewController: UIViewController {
     takeCodeButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
   }
   
+  @objc
+  func takeCodeButtonAction() {
+    if let text = phoneTextField.text, !text.isEmpty {
+      if text.contains("+7") {
+        AuthManager.shared.startAuth(phoneNumber: text) { [weak self] (success) in
+          guard success else {
+            // TODO: Alert
+            return
+          }
+          
+          DispatchQueue.main.async {
+            let vc = SMSCodeViewController()
+            vc.title = "Введите полученный код"
+            self?.navigationController?.pushViewController(vc, animated: true)
+          }
+        }
+      } else {
+        // TODO: Alert
+      }
+    } else {
+      // TODO: Сделать Алерты
+    }
+  }
+  
   private func setupPhoneTextField() {
     view.addSubview(phoneTextField)
+    phoneTextField.delegate = self
     addLeftImageTo(textField: phoneTextField, image: UIImage(systemName: "phone")!)
     phoneTextField.translatesAutoresizingMaskIntoConstraints = false
     phoneTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -86,3 +112,34 @@ class RegistrationViewController: UIViewController {
   
 }
 
+// MARK: - UITextFieldDelegate
+extension RegistrationViewController: UITextFieldDelegate {
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.becomeFirstResponder()
+    
+    if let text = textField.text, !text.isEmpty {
+      if text.contains("+7") {
+        AuthManager.shared.startAuth(phoneNumber: text) { [weak self] (success) in
+          guard success else {
+            // TODO: Alert
+            return
+          }
+          
+          DispatchQueue.main.async {
+            let vc = SMSCodeViewController()
+            vc.title = "Введите полученный код"
+            self?.navigationController?.pushViewController(vc, animated: true)
+          }
+        }
+      } else {
+        // TODO: Alert
+      }
+    } else {
+      // TODO: Сделать Алерты
+    }
+    
+    return true
+  }
+  
+}
