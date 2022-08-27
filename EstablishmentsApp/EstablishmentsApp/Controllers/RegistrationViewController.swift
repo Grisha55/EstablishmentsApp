@@ -10,12 +10,15 @@ import UIKit
 class RegistrationViewController: UIViewController {
 
   // MARK: - Properties
+  var alertsBuilder = AlertsBuilder()
+  
   private let phoneTextField: UITextField = {
     let tf = UITextField()
     tf.text = "+7"
     tf.layer.cornerRadius = 7
     tf.font = UIFont.systemFont(ofSize: 20)
     tf.backgroundColor = .white
+    tf.keyboardType = .numberPad
     return tf
   }()
   
@@ -73,7 +76,8 @@ class RegistrationViewController: UIViewController {
       if text.contains("+7") {
         AuthManager.shared.startAuth(phoneNumber: text) { [weak self] (success) in
           guard success else {
-            // TODO: Alert
+            guard let alert = self?.alertsBuilder.buildCancelAlert(with: "Ошибка, связанная с номером телефона", handler: nil) else { return }
+            self?.present(alert, animated: true, completion: nil)
             return
           }
           
@@ -84,10 +88,12 @@ class RegistrationViewController: UIViewController {
           }
         }
       } else {
-        // TODO: Alert
+        let alert = alertsBuilder.buildCancelAlert(with: "Неправильно набран номер", handler: nil)
+        self.present(alert, animated: true, completion: nil)
       }
     } else {
-      // TODO: Сделать Алерты
+      let alert = alertsBuilder.buildCancelAlert(with: "Неправильно набран номер", handler: nil)
+      self.present(alert, animated: true, completion: nil)
     }
   }
   
@@ -118,11 +124,12 @@ extension RegistrationViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.becomeFirstResponder()
     
-    if let text = textField.text, !text.isEmpty {
+    if let text = textField.text, !text.isEmpty, text.count == 12 {
       if text.contains("+7") {
         AuthManager.shared.startAuth(phoneNumber: text) { [weak self] (success) in
           guard success else {
-            // TODO: Alert
+            guard let alert = self?.alertsBuilder.buildCancelAlert(with: "Ошибка, связанная с номером телефона", handler: nil) else { return }
+            self?.present(alert, animated: true, completion: nil)
             return
           }
           
@@ -133,10 +140,12 @@ extension RegistrationViewController: UITextFieldDelegate {
           }
         }
       } else {
-        // TODO: Alert
+        let alert = alertsBuilder.buildCancelAlert(with: "Неправильно набран номер", handler: nil)
+        self.present(alert, animated: true, completion: nil)
       }
     } else {
-      // TODO: Сделать Алерты
+      let alert = alertsBuilder.buildCancelAlert(with: "Неправильно набран номер", handler: nil)
+      self.present(alert, animated: true, completion: nil)
     }
     
     return true
