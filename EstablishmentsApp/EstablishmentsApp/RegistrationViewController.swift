@@ -78,8 +78,8 @@ class RegistrationViewController: UIViewController {
           }
           
           DispatchQueue.main.async {
-            let vc = SMSCodeViewController()
-            vc.title = "Введите полученный код"
+            let vc = SMSCodeViewController(phoneNumber: text)
+            vc.title = "Введите код"
             self?.navigationController?.pushViewController(vc, animated: true)
           }
         }
@@ -127,8 +127,8 @@ extension RegistrationViewController: UITextFieldDelegate {
           }
           
           DispatchQueue.main.async {
-            let vc = SMSCodeViewController()
-            vc.title = "Введите полученный код"
+            let vc = SMSCodeViewController(phoneNumber: text)
+            vc.title = "Введите код"
             self?.navigationController?.pushViewController(vc, animated: true)
           }
         }
