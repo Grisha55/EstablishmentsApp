@@ -125,6 +125,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BE177ECC28BC08C200DB687D /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				BE4808CC28BAAF1600277730 /* AlertsBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
 		BE4793A828B952D1006EAC7E = {
 			isa = PBXGroup;
 			children = (
@@ -146,16 +154,16 @@
 		BE4793B328B952D2006EAC7E /* EstablishmentsApp */ = {
 			isa = PBXGroup;
 			children = (
-				BE9E8C5028BB8AB80083EDAA /* AssemblyLayer */,
-				BE9E8C4128BB7D410083EDAA /* NetworkLayer */,
-				BE9E8C3E28BB7A3E0083EDAA /* Presenters */,
-				BE9E8C3928BB75F40083EDAA /* Models */,
-				BE4808CC28BAAF1600277730 /* AlertsBuilder.swift */,
 				BE4808CB28BAADAA00277730 /* System */,
-				BE9E8C3828BB75E70083EDAA /* View */,
-				BE4808CA28BAAD9B00277730 /* CustomElements */,
-				BE4808C928BAAD5100277730 /* AuthManager */,
+				BE9E8C5028BB8AB80083EDAA /* AssemblyLayer */,
+				BE4808C928BAAD5100277730 /* Managers */,
+				BE9E8C4128BB7D410083EDAA /* NetworkLayer */,
 				BE4808C828BAAD4200277730 /* Extensions */,
+				BE177ECC28BC08C200DB687D /* Builders */,
+				BE4808CA28BAAD9B00277730 /* CustomElements */,
+				BE9E8C3928BB75F40083EDAA /* Models */,
+				BE9E8C3828BB75E70083EDAA /* Views */,
+				BE9E8C3E28BB7A3E0083EDAA /* Presenters */,
 				BE4808C728BAAD2D00277730 /* Controllers */,
 				BE4793BD28B952D4006EAC7E /* Assets.xcassets */,
 				BE4793BF28B952D4006EAC7E /* LaunchScreen.storyboard */,
@@ -186,12 +194,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		BE4808C928BAAD5100277730 /* AuthManager */ = {
+		BE4808C928BAAD5100277730 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				BEA7584828BA04A80009DCFF /* AuthManager.swift */,
 			);
-			path = AuthManager;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		BE4808CA28BAAD9B00277730 /* CustomElements */ = {
@@ -211,13 +219,13 @@
 			path = System;
 			sourceTree = "<group>";
 		};
-		BE9E8C3828BB75E70083EDAA /* View */ = {
+		BE9E8C3828BB75E70083EDAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				BE9E8C3628BB44EF0083EDAA /* EstablishmentsTableViewCell.swift */,
 				BE177ECA28BBF9B300DB687D /* MenuCollectionViewCell.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BE9E8C3928BB75F40083EDAA /* Models */ = {
