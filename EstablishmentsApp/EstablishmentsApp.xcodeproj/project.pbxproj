@@ -26,6 +26,7 @@
 		BE9E8C3728BB44EF0083EDAA /* EstablishmentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C3628BB44EF0083EDAA /* EstablishmentsTableViewCell.swift */; };
 		BE9E8C3B28BB76010083EDAA /* EstablishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C3A28BB76010083EDAA /* EstablishModel.swift */; };
 		BE9E8C3D28BB786B0083EDAA /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C3C28BB786B0083EDAA /* UIImageView+extension.swift */; };
+		BE9E8C4028BB7A4C0083EDAA /* EstablishmentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C3F28BB7A4C0083EDAA /* EstablishmentsPresenter.swift */; };
 		BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584828BA04A80009DCFF /* AuthManager.swift */; };
 		BEA7584B28BA0A520009DCFF /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */; };
 		BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */; };
@@ -46,6 +47,7 @@
 		BE9E8C3628BB44EF0083EDAA /* EstablishmentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsTableViewCell.swift; sourceTree = "<group>"; };
 		BE9E8C3A28BB76010083EDAA /* EstablishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishModel.swift; sourceTree = "<group>"; };
 		BE9E8C3C28BB786B0083EDAA /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		BE9E8C3F28BB7A4C0083EDAA /* EstablishmentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsPresenter.swift; sourceTree = "<group>"; };
 		BEA7584828BA04A80009DCFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		BE4793B328B952D2006EAC7E /* EstablishmentsApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE9E8C3E28BB7A3E0083EDAA /* Presenters */,
 				BE9E8C3928BB75F40083EDAA /* Models */,
 				BE4808CC28BAAF1600277730 /* AlertsBuilder.swift */,
 				BE4808CB28BAADAA00277730 /* System */,
@@ -164,6 +167,14 @@
 				BE9E8C3A28BB76010083EDAA /* EstablishModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BE9E8C3E28BB7A3E0083EDAA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				BE9E8C3F28BB7A4C0083EDAA /* EstablishmentsPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +265,7 @@
 				BE4808CD28BAAF1600277730 /* AlertsBuilder.swift in Sources */,
 				BE4808C628BA81A200277730 /* Timer+extension.swift in Sources */,
 				BE4793B928B952D2006EAC7E /* RegistrationViewController.swift in Sources */,
+				BE9E8C4028BB7A4C0083EDAA /* EstablishmentsPresenter.swift in Sources */,
 				BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */,
 				BE9E8C3B28BB76010083EDAA /* EstablishModel.swift in Sources */,
 				BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */,
