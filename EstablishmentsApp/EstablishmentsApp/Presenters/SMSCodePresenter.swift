@@ -34,7 +34,7 @@ class SMSCodePresenter: SMSCodePresenterProtocol {
       }
       
       DispatchQueue.main.async {
-        let vc = AssemblyBuilder.shared.createEstablishmetnsVC()
+        let vc = TabBarController()
         vc.modalPresentationStyle = .fullScreen
         self?.view.present(vc, animated: true, completion: nil)
       }

@@ -36,6 +36,7 @@
 		BE9E8C5228BB8AC90083EDAA /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5128BB8AC90083EDAA /* AssemblyBuilder.swift */; };
 		BE9E8C5428BB8B980083EDAA /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5328BB8B980083EDAA /* RegistrationPresenter.swift */; };
 		BE9E8C5628BB8ECD0083EDAA /* SMSCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5528BB8ECD0083EDAA /* SMSCodePresenter.swift */; };
+		BE9E8C5828BB968A0083EDAA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5728BB968A0083EDAA /* TabBarController.swift */; };
 		BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584828BA04A80009DCFF /* AuthManager.swift */; };
 		BEA7584B28BA0A520009DCFF /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */; };
 		BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */; };
@@ -66,6 +67,7 @@
 		BE9E8C5128BB8AC90083EDAA /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		BE9E8C5328BB8B980083EDAA /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		BE9E8C5528BB8ECD0083EDAA /* SMSCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodePresenter.swift; sourceTree = "<group>"; };
+		BE9E8C5728BB968A0083EDAA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BEA7584828BA04A80009DCFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				BE4793B828B952D2006EAC7E /* RegistrationViewController.swift */,
 				BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */,
 				BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */,
+				BE9E8C5728BB968A0083EDAA /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				BE9E8C4528BB7D880083EDAA /* HTTPURLResponse.swift in Sources */,
 				BE9E8C5628BB8ECD0083EDAA /* SMSCodePresenter.swift in Sources */,
 				BE4808C628BA81A200277730 /* Timer+extension.swift in Sources */,
+				BE9E8C5828BB968A0083EDAA /* TabBarController.swift in Sources */,
 				BE4793B928B952D2006EAC7E /* RegistrationViewController.swift in Sources */,
 				BE9E8C4728BB7DAE0083EDAA /* EstablishmentsRequest.swift in Sources */,
 				BE9E8C4028BB7A4C0083EDAA /* EstablishmentsPresenter.swift in Sources */,
