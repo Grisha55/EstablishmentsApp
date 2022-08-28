@@ -7,14 +7,19 @@
 
 import UIKit
 
+var imageCache = [URL : UIImage]()
+
 extension UIImageView {
   func load(url: URL) {
-    DispatchQueue.global().async { [weak self] in
+    
+    if let image = imageCache[url] {
+      self.image = image
+    } else {
       if let data = try? Data(contentsOf: url) {
-        if let image = UIImage(data: data) {
-          DispatchQueue.main.async {
-            self?.image = image
-          }
+        let image = UIImage(data: data)
+        imageCache[url] = image
+        DispatchQueue.main.async { [weak self] in
+          self?.image = image
         }
       }
     }
