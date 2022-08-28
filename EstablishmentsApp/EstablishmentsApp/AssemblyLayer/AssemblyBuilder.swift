@@ -13,10 +13,11 @@ class AssemblyBuilder {
   
   func createMapVC() -> UIViewController {
     let view = MapViewController()
-    let request = EstablishmentsRequest.from()
+    let establishmentsRequest = EstablishmentsRequest.from()
+    let menuRequest = MenuRequest.from()
     let client = StackExchangeClient()
     let alertsBuilder = AlertsBuilder()
-    let mapPresenter = MapViewPresenter(request: request, client: client, alertsBuilder: alertsBuilder, view: view)
+    let mapPresenter = MapViewPresenter(establishmentsRequest: establishmentsRequest, menuRequest: menuRequest, client: client, alertsBuilder: alertsBuilder, view: view)
     
     view.mapPresenter = mapPresenter
     

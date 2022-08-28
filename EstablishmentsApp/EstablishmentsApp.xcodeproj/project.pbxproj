@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE177EC728BBF0CC00DB687D /* MenuRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE177EC628BBF0CB00DB687D /* MenuRequest.swift */; };
+		BE177EC928BBF14000DB687D /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE177EC828BBF14000DB687D /* MenuModel.swift */; };
 		BE4793B528B952D2006EAC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4793B428B952D2006EAC7E /* AppDelegate.swift */; };
 		BE4793B728B952D2006EAC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4793B628B952D2006EAC7E /* SceneDelegate.swift */; };
 		BE4793B928B952D2006EAC7E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4793B828B952D2006EAC7E /* RegistrationViewController.swift */; };
@@ -50,6 +52,8 @@
 		2F226799C66D21FC7A75103D /* Pods-EstablishmentsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstablishmentsApp.release.xcconfig"; path = "Target Support Files/Pods-EstablishmentsApp/Pods-EstablishmentsApp.release.xcconfig"; sourceTree = "<group>"; };
 		4C374C58889763C3B08DB162 /* Pods-EstablishmentsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstablishmentsApp.debug.xcconfig"; path = "Target Support Files/Pods-EstablishmentsApp/Pods-EstablishmentsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BA1664EE0D7A9E905A5F0E29 /* Pods_EstablishmentsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstablishmentsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE177EC628BBF0CB00DB687D /* MenuRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRequest.swift; sourceTree = "<group>"; };
+		BE177EC828BBF14000DB687D /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		BE4793B128B952D2006EAC7E /* EstablishmentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstablishmentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4793B428B952D2006EAC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE4793B628B952D2006EAC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				BE9E8C3A28BB76010083EDAA /* EstablishModel.swift */,
+				BE177EC828BBF14000DB687D /* MenuModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				BE9E8C4228BB7D5C0083EDAA /* DataResponseError.swift */,
 				BE9E8C4428BB7D880083EDAA /* HTTPURLResponse.swift */,
 				BE9E8C4628BB7DAE0083EDAA /* EstablishmentsRequest.swift */,
+				BE177EC628BBF0CB00DB687D /* MenuRequest.swift */,
 				BE9E8C4828BB7DDD0083EDAA /* Result.swift */,
 				BE9E8C4A28BB7E130083EDAA /* StackExchangeClient.swift */,
 				BE9E8C4C28BB7EF40083EDAA /* URLRequest.swift */,
@@ -383,6 +389,7 @@
 			files = (
 				BEA7584B28BA0A520009DCFF /* SMSCodeViewController.swift in Sources */,
 				BE4808CD28BAAF1600277730 /* AlertsBuilder.swift in Sources */,
+				BE177EC928BBF14000DB687D /* MenuModel.swift in Sources */,
 				BE9E8C4528BB7D880083EDAA /* HTTPURLResponse.swift in Sources */,
 				BE9E8C5628BB8ECD0083EDAA /* SMSCodePresenter.swift in Sources */,
 				BE4808C628BA81A200277730 /* Timer+extension.swift in Sources */,
@@ -393,6 +400,7 @@
 				BE9E8C4028BB7A4C0083EDAA /* EstablishmentsPresenter.swift in Sources */,
 				BEE2782228BBC26F00E771EA /* MapViewPresenter.swift in Sources */,
 				BE9E8C5428BB8B980083EDAA /* RegistrationPresenter.swift in Sources */,
+				BE177EC728BBF0CC00DB687D /* MenuRequest.swift in Sources */,
 				BE9E8C4328BB7D5C0083EDAA /* DataResponseError.swift in Sources */,
 				BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */,
 				BE9E8C3B28BB76010083EDAA /* EstablishModel.swift in Sources */,
