@@ -33,6 +33,14 @@ class EstablishmentsCollectionViewCell: UICollectionViewCell {
     setupNameLabel()
   }
   
+  var establishModel: EstablishModel? {
+    didSet {
+      guard let url = URL(string: establishModel?.image ?? "") else { return }
+      photoImageView.load(url: url)
+      nameLabel.text = establishModel?.name
+    }
+  }
+  
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
