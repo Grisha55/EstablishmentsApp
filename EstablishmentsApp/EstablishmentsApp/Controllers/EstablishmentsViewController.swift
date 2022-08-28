@@ -88,7 +88,8 @@ extension EstablishmentsViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: EstablishmentsCollectionViewCell.self), for: indexPath)
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: EstablishmentsCollectionViewCell.self), for: indexPath) as? EstablishmentsCollectionViewCell else { return UICollectionViewCell() }
+    cell.establishModel = EstablishModel(image: "", name: "", id: "", lat: 0.0, lon: 0.0)
     return cell
   }
 }
