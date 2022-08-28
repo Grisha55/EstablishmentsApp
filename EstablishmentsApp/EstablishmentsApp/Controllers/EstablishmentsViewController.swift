@@ -15,6 +15,8 @@ private enum LayoutConstant {
 class EstablishmentsViewController: UIViewController {
 
   // MARK: - Properties
+  var establishmentsPresenter = EstablishmentsPresenter()
+  
   private lazy var establishmentsCollectionView: UICollectionView = {
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
     collectionView.backgroundColor = .white
@@ -84,12 +86,13 @@ extension EstablishmentsViewController: UICollectionViewDelegateFlowLayout {
 extension EstablishmentsViewController: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 4
+    return establishmentsPresenter.establishments.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: EstablishmentsCollectionViewCell.self), for: indexPath) as? EstablishmentsCollectionViewCell else { return UICollectionViewCell() }
-    cell.establishModel = EstablishModel(image: "", name: "", id: "", lat: 0.0, lon: 0.0)
+    let establishment = establishmentsPresenter.establishments[indexPath.row]
+    cell.establishModel = establishment
     return cell
   }
 }
