@@ -14,14 +14,13 @@ class EstablishmentsCollectionViewCell: UICollectionViewCell {
     let imageView = UIImageView()
     imageView.backgroundColor = .yellow
     imageView.layer.cornerRadius = 30
-    imageView.contentMode = .scaleAspectFill
+    imageView.contentMode = .scaleToFill
     return imageView
   }()
   
   private let nameLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 20)
-    label.text = "lkfjlkdsfjsdlkjfl;kdsjfkld"
     label.numberOfLines = 0
     label.textAlignment = .center
     return label
