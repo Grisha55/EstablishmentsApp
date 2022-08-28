@@ -9,6 +9,7 @@ import Foundation
 
 protocol MapViewPresenterProtocol: AnyObject {
   func getEstablishmentsCoordinates()
+  var establishments: [EstablishModel] { get }
 }
 
 class MapViewPresenter: MapViewPresenterProtocol {
