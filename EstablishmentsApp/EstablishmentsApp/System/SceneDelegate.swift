@@ -20,13 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window?.windowScene = scene
     
     if Auth.auth().currentUser == nil {
-      let vc = RegistrationViewController()
+      let vc = AssemblyBuilder.shared.createRegistrationVC()
       vc.title = "Вход"
       let navVC = UINavigationController(rootViewController: vc)
       window?.rootViewController = navVC
     }
     else {
-      window?.rootViewController = UINavigationController(rootViewController: EstablishmentsViewController())
+      window?.rootViewController = UINavigationController(rootViewController: AssemblyBuilder.shared.createRegistrationVC())
     }
     
     window?.makeKeyAndVisible()

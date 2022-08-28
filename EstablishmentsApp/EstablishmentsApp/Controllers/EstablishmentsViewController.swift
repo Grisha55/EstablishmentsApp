@@ -31,7 +31,6 @@ class EstablishmentsViewController: UIViewController {
       view.backgroundColor = .white
       title = "Список мест"
       navigationController?.navigationBar.prefersLargeTitles = true
-      establishmentsPresenter = EstablishmentsPresenter(request: EstablishmentsRequest.from(), client: StackExchangeClient(), view: self)
       
       setupEstablishmentsCollectionView()
       establishmentsPresenter.getEstablishments()

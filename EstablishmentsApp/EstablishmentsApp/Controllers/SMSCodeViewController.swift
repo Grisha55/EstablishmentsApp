@@ -10,10 +10,10 @@ import UIKit
 class SMSCodeViewController: UIViewController {
 
   // MARK: - Properties
-  var alertsBuilder = AlertsBuilder()
+  var smsCodePresenter: SMSCodePresenterProtocol!
   
   private var timer: Timer?
-  private var countDown = 120
+  var countDown = 120
   private var phoneNumber: String?
   
   private let timerLabel: UILabel = {
@@ -65,7 +65,7 @@ class SMSCodeViewController: UIViewController {
     }
     
   // MARK: - Methods
-  private func setupTimer() {
+  func setupTimer() {
     timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countDownAction), userInfo: nil, repeats: true)
     timerLabel.isHidden = false
     sendAgainButton.isHidden = true
@@ -103,15 +103,7 @@ class SMSCodeViewController: UIViewController {
   
   @objc
   func sendAgainButtonAction() {
-    AuthManager.shared.startAuth(phoneNumber: phoneNumber ?? "") { [weak self] (success) in
-      guard success else {
-        guard let alert = self?.alertsBuilder.buildCancelAlert(with: "Ошибка, связанная с номером телефона", handler: nil) else { return }
-        self?.present(alert, animated: true, completion: nil)
-        return
-      }
-      self?.countDown = 120
-      self?.setupTimer()
-    }
+    smsCodePresenter.sendAgainButtonAction(phoneNumber: phoneNumber)
   }
   
   private func setupDetailsLabel() {
@@ -130,19 +122,7 @@ class SMSCodeViewController: UIViewController {
     customTextField.topAnchor.constraint(equalTo: detailsLabel.bottomAnchor, constant: 20).isActive = true
     customTextField.configure()
     customTextField.didEnterLastDigit = { [weak self] (code) in
-      AuthManager.shared.verifyCode(smsCode: code) { success in
-        guard success else {
-          guard let alert = self?.alertsBuilder.buildCancelAlert(with: "Неправильный код", handler: nil) else { return }
-          self?.present(alert, animated: true, completion: nil)
-          return
-        }
-        
-        DispatchQueue.main.async {
-          let vc = EstablishmentsViewController()
-          vc.modalPresentationStyle = .fullScreen
-          self?.present(vc, animated: true, completion: nil)
-        }
-      }
+      self?.smsCodePresenter.verifyCodeAction(code: code)
     }
   }
 

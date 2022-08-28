@@ -33,6 +33,9 @@
 		BE9E8C4928BB7DDD0083EDAA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C4828BB7DDD0083EDAA /* Result.swift */; };
 		BE9E8C4B28BB7E130083EDAA /* StackExchangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C4A28BB7E130083EDAA /* StackExchangeClient.swift */; };
 		BE9E8C4D28BB7EF40083EDAA /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C4C28BB7EF40083EDAA /* URLRequest.swift */; };
+		BE9E8C5228BB8AC90083EDAA /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5128BB8AC90083EDAA /* AssemblyBuilder.swift */; };
+		BE9E8C5428BB8B980083EDAA /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5328BB8B980083EDAA /* RegistrationPresenter.swift */; };
+		BE9E8C5628BB8ECD0083EDAA /* SMSCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5528BB8ECD0083EDAA /* SMSCodePresenter.swift */; };
 		BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584828BA04A80009DCFF /* AuthManager.swift */; };
 		BEA7584B28BA0A520009DCFF /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */; };
 		BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */; };
@@ -60,6 +63,9 @@
 		BE9E8C4828BB7DDD0083EDAA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		BE9E8C4A28BB7E130083EDAA /* StackExchangeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackExchangeClient.swift; sourceTree = "<group>"; };
 		BE9E8C4C28BB7EF40083EDAA /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		BE9E8C5128BB8AC90083EDAA /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
+		BE9E8C5328BB8B980083EDAA /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		BE9E8C5528BB8ECD0083EDAA /* SMSCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodePresenter.swift; sourceTree = "<group>"; };
 		BEA7584828BA04A80009DCFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		BE4793B328B952D2006EAC7E /* EstablishmentsApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE9E8C5028BB8AB80083EDAA /* AssemblyLayer */,
 				BE9E8C4128BB7D410083EDAA /* NetworkLayer */,
 				BE9E8C3E28BB7A3E0083EDAA /* Presenters */,
 				BE9E8C3928BB75F40083EDAA /* Models */,
@@ -185,6 +192,8 @@
 		BE9E8C3E28BB7A3E0083EDAA /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				BE9E8C5328BB8B980083EDAA /* RegistrationPresenter.swift */,
+				BE9E8C5528BB8ECD0083EDAA /* SMSCodePresenter.swift */,
 				BE9E8C3F28BB7A4C0083EDAA /* EstablishmentsPresenter.swift */,
 			);
 			path = Presenters;
@@ -201,6 +210,14 @@
 				BE9E8C4C28BB7EF40083EDAA /* URLRequest.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		BE9E8C5028BB8AB80083EDAA /* AssemblyLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BE9E8C5128BB8AC90083EDAA /* AssemblyBuilder.swift */,
+			);
+			path = AssemblyLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,14 +307,17 @@
 				BEA7584B28BA0A520009DCFF /* SMSCodeViewController.swift in Sources */,
 				BE4808CD28BAAF1600277730 /* AlertsBuilder.swift in Sources */,
 				BE9E8C4528BB7D880083EDAA /* HTTPURLResponse.swift in Sources */,
+				BE9E8C5628BB8ECD0083EDAA /* SMSCodePresenter.swift in Sources */,
 				BE4808C628BA81A200277730 /* Timer+extension.swift in Sources */,
 				BE4793B928B952D2006EAC7E /* RegistrationViewController.swift in Sources */,
 				BE9E8C4728BB7DAE0083EDAA /* EstablishmentsRequest.swift in Sources */,
 				BE9E8C4028BB7A4C0083EDAA /* EstablishmentsPresenter.swift in Sources */,
+				BE9E8C5428BB8B980083EDAA /* RegistrationPresenter.swift in Sources */,
 				BE9E8C4328BB7D5C0083EDAA /* DataResponseError.swift in Sources */,
 				BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */,
 				BE9E8C3B28BB76010083EDAA /* EstablishModel.swift in Sources */,
 				BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */,
+				BE9E8C5228BB8AC90083EDAA /* AssemblyBuilder.swift in Sources */,
 				BE9E8C4D28BB7EF40083EDAA /* URLRequest.swift in Sources */,
 				BEA7584F28BA31350009DCFF /* CustomTextField.swift in Sources */,
 				BE9E8C3728BB44EF0083EDAA /* EstablishmentsTableViewCell.swift in Sources */,

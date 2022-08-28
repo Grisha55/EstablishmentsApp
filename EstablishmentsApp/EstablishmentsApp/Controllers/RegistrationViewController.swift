@@ -10,7 +10,7 @@ import UIKit
 class RegistrationViewController: UIViewController {
 
   // MARK: - Properties
-  var alertsBuilder = AlertsBuilder()
+  var registrationPresenter: RegistrationPresenterProtocol!
   
   private let phoneTextField: UITextField = {
     let tf = UITextField()
@@ -72,29 +72,7 @@ class RegistrationViewController: UIViewController {
   
   @objc
   func takeCodeButtonAction() {
-    if let text = phoneTextField.text, !text.isEmpty {
-      if text.contains("+7") {
-        AuthManager.shared.startAuth(phoneNumber: text) { [weak self] (success) in
-          guard success else {
-            guard let alert = self?.alertsBuilder.buildCancelAlert(with: "Ошибка, связанная с номером телефона", handler: nil) else { return }
-            self?.present(alert, animated: true, completion: nil)
-            return
-          }
-          
-          DispatchQueue.main.async {
-            let vc = SMSCodeViewController(phoneNumber: text)
-            vc.title = "Введите код"
-            self?.navigationController?.pushViewController(vc, animated: true)
-          }
-        }
-      } else {
-        let alert = alertsBuilder.buildCancelAlert(with: "Неправильно набран номер", handler: nil)
-        self.present(alert, animated: true, completion: nil)
-      }
-    } else {
-      let alert = alertsBuilder.buildCancelAlert(with: "Неправильно набран номер", handler: nil)
-      self.present(alert, animated: true, completion: nil)
-    }
+    registrationPresenter.takeCodeButtonAction(phoneTextField: phoneTextField)
   }
   
   private func setupPhoneTextField() {
@@ -123,31 +101,7 @@ extension RegistrationViewController: UITextFieldDelegate {
   
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.becomeFirstResponder()
-    
-    if let text = textField.text, !text.isEmpty, text.count == 12 {
-      if text.contains("+7") {
-        AuthManager.shared.startAuth(phoneNumber: text) { [weak self] (success) in
-          guard success else {
-            guard let alert = self?.alertsBuilder.buildCancelAlert(with: "Ошибка, связанная с номером телефона", handler: nil) else { return }
-            self?.present(alert, animated: true, completion: nil)
-            return
-          }
-          
-          DispatchQueue.main.async {
-            let vc = SMSCodeViewController(phoneNumber: text)
-            vc.title = "Введите код"
-            self?.navigationController?.pushViewController(vc, animated: true)
-          }
-        }
-      } else {
-        let alert = alertsBuilder.buildCancelAlert(with: "Неправильно набран номер", handler: nil)
-        self.present(alert, animated: true, completion: nil)
-      }
-    } else {
-      let alert = alertsBuilder.buildCancelAlert(with: "Неправильно набран номер", handler: nil)
-      self.present(alert, animated: true, completion: nil)
-    }
-    
+    registrationPresenter.takeCodeButtonAction(phoneTextField: phoneTextField)
     return true
   }
   
