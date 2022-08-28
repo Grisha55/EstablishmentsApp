@@ -9,16 +9,17 @@ import UIKit
 
 private enum LayoutConstant {
   static let spacing: CGFloat = 16.0
-  static let itemHeight: CGFloat = 300.0
+  static let itemHeight: CGFloat = 250.0
 }
 
 class EstablishmentsViewController: UIViewController {
 
   // MARK: - Properties
-  var establishmentsPresenter = EstablishmentsPresenter()
+  var establishmentsPresenter: EstablishmentsPresenter!
   
-  private lazy var establishmentsCollectionView: UICollectionView = {
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+  lazy var establishmentsCollectionView: UICollectionView = {
+    let viewLayout = UICollectionViewFlowLayout()
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
     collectionView.backgroundColor = .white
     collectionView.indicatorStyle = .white
     return collectionView
@@ -30,15 +31,15 @@ class EstablishmentsViewController: UIViewController {
       view.backgroundColor = .white
       title = "Список мест"
       navigationController?.navigationBar.prefersLargeTitles = true
+      establishmentsPresenter = EstablishmentsPresenter(request: EstablishmentsRequest.from(), client: StackExchangeClient(), view: self)
+      
       setupEstablishmentsCollectionView()
+      establishmentsPresenter.getEstablishments()
     }
     
   // MARK: - Methods
   private func setupEstablishmentsCollectionView() {
     view.addSubview(establishmentsCollectionView)
-    let viewLayout = UICollectionViewFlowLayout()
-    viewLayout.scrollDirection = .horizontal
-    establishmentsCollectionView.collectionViewLayout = viewLayout
     
     establishmentsCollectionView.register(EstablishmentsCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: EstablishmentsCollectionViewCell.self))
     establishmentsCollectionView.dataSource = self
@@ -70,7 +71,7 @@ extension EstablishmentsViewController: UICollectionViewDelegateFlowLayout {
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: LayoutConstant.spacing, left: LayoutConstant.spacing, bottom: LayoutConstant.spacing, right: LayoutConstant.spacing)
+    return UIEdgeInsets(top: 5, left: LayoutConstant.spacing, bottom: 0, right: LayoutConstant.spacing)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -78,7 +79,7 @@ extension EstablishmentsViewController: UICollectionViewDelegateFlowLayout {
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return LayoutConstant.spacing
+    return 10
   }
 }
 
