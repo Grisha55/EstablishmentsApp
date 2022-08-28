@@ -23,6 +23,7 @@
 		BE4793DA28B957DC006EAC7E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BE4793D928B957DC006EAC7E /* FirebaseStorage */; };
 		BE4808C628BA81A200277730 /* Timer+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4808C528BA81A100277730 /* Timer+extension.swift */; };
 		BE4808CD28BAAF1600277730 /* AlertsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4808CC28BAAF1600277730 /* AlertsBuilder.swift */; };
+		BE9E8C3728BB44EF0083EDAA /* EstablishmentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C3628BB44EF0083EDAA /* EstablishmentsTableViewCell.swift */; };
 		BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584828BA04A80009DCFF /* AuthManager.swift */; };
 		BEA7584B28BA0A520009DCFF /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */; };
 		BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */; };
@@ -40,6 +41,7 @@
 		BE4793C828B95564006EAC7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE4808C528BA81A100277730 /* Timer+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+extension.swift"; sourceTree = "<group>"; };
 		BE4808CC28BAAF1600277730 /* AlertsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsBuilder.swift; sourceTree = "<group>"; };
+		BE9E8C3628BB44EF0083EDAA /* EstablishmentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsTableViewCell.swift; sourceTree = "<group>"; };
 		BEA7584828BA04A80009DCFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				BE4793BF28B952D4006EAC7E /* LaunchScreen.storyboard */,
 				BE4793C828B95564006EAC7E /* GoogleService-Info.plist */,
 				BE4793C228B952D4006EAC7E /* Info.plist */,
+				BE9E8C3628BB44EF0083EDAA /* EstablishmentsTableViewCell.swift */,
 			);
 			path = EstablishmentsApp;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */,
 				BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */,
 				BEA7584F28BA31350009DCFF /* CustomTextField.swift in Sources */,
+				BE9E8C3728BB44EF0083EDAA /* EstablishmentsTableViewCell.swift in Sources */,
 				BE4793B528B952D2006EAC7E /* AppDelegate.swift in Sources */,
 				BE4793B728B952D2006EAC7E /* SceneDelegate.swift in Sources */,
 			);
