@@ -9,21 +9,42 @@ import UIKit
 
 class EstablishmentsViewController: UIViewController {
 
+  // MARK: - Properties
+  private let establishmentsTableView: UITableView = {
+    let table = UITableView()
+    return table
+  }()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      view.backgroundColor = .cyan
+      view.backgroundColor = .white
+      title = "Список мест"
+      navigationController?.navigationBar.prefersLargeTitles = true
+      setupEstablishmentsTableView()
     }
     
+  // MARK: - Methods
+  private func setupEstablishmentsTableView() {
+    view.addSubview(establishmentsTableView)
+    establishmentsTableView.dataSource = self
+    
+    establishmentsTableView.translatesAutoresizingMaskIntoConstraints = false
+    establishmentsTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+    establishmentsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    establishmentsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    establishmentsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+  }
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension EstablishmentsViewController: UITableViewDataSource {
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 5
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    return UITableViewCell()
+  }
 }
