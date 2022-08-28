@@ -109,6 +109,7 @@ extension MapViewController: GMSMapViewDelegate {
   }
 }
 
+// MARK: - MenuCollectionViewCellDelegate
 extension MapViewController: MenuCollectionViewCellDelegate {
   
   func closeButtonAction() {
