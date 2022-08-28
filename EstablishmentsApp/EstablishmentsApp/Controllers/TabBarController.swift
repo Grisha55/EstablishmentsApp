@@ -22,11 +22,15 @@ class TabBarController: UITabBarController {
     let establishmentsVC = UINavigationController(rootViewController: AssemblyBuilder.shared.createEstablishmetnsVC())
     establishmentsVC.title = "Список мест"
     
-    self.setViewControllers([establishmentsVC], animated: true)
+    let mapVC = UINavigationController(rootViewController: AssemblyBuilder.shared.createMapVC())
+    mapVC.title = "Объекты на карте"
+    
+    self.setViewControllers([establishmentsVC, mapVC], animated: true)
     
     guard let items = tabBar.items else { return }
     
     items[0].image = UIImage(systemName: "menucard")
+    items[1].image = UIImage(systemName: "map")
   }
 
 }

@@ -26,7 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       window?.rootViewController = navVC
     }
     else {
-      window?.rootViewController = UINavigationController(rootViewController: AssemblyBuilder.shared.createRegistrationVC())
+      //window?.rootViewController = UINavigationController(rootViewController: AssemblyBuilder.shared.createRegistrationVC())
+      window?.rootViewController = TabBarController()
     }
     
     window?.makeKeyAndVisible()

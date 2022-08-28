@@ -30,7 +30,7 @@ class EstablishmentsPresenter: EstablishmentsPresenterProtocol {
   
   // MARK: - Methods
   func getEstablishments() {
-    client.getPhotos(with: request) { [weak self] (result) in
+    client.getEstablishments(with: request) { [weak self] (result) in
       switch result {
       case .failure(_):
         guard let alert = self?.alertsBuilder.buildCancelAlert(with: "Ошибка сервера, попробуйте позже!", handler: nil) else { return }
