@@ -8,7 +8,7 @@
 import Foundation
 
 protocol StackExchangeClientProtocol: AnyObject {
-  func getPhotos(with request: EstablishmentsRequest, completion: @escaping (Result<[EstablishModel] , DataResponseError>) -> Void)
+  func getEstablishments(with request: EstablishmentsRequest, completion: @escaping (Result<[EstablishModel] , DataResponseError>) -> Void)
 }
 
 final class StackExchangeClient: StackExchangeClientProtocol {
@@ -22,7 +22,7 @@ final class StackExchangeClient: StackExchangeClientProtocol {
     self.session = session
   }
   
-  func getPhotos(with request: EstablishmentsRequest, completion: @escaping (Result<[EstablishModel], DataResponseError>) -> Void) {
+  func getEstablishments(with request: EstablishmentsRequest, completion: @escaping (Result<[EstablishModel], DataResponseError>) -> Void) {
     
     let urlRequest = URLRequest(url: baseURL.appendingPathComponent(request.path))
     

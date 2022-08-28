@@ -11,6 +11,18 @@ class AssemblyBuilder {
   
   static let shared = AssemblyBuilder()
   
+  func createMapVC() -> UIViewController {
+    let view = MapViewController()
+    let request = EstablishmentsRequest.from()
+    let client = StackExchangeClient()
+    let alertsBuilder = AlertsBuilder()
+    let mapPresenter = MapViewPresenter(request: request, client: client, alertsBuilder: alertsBuilder, view: view)
+    
+    view.mapPresenter = mapPresenter
+    
+    return view
+  }
+  
   func createEstablishmetnsVC() -> UIViewController {
     let view = EstablishmentsViewController()
     let alertsBuilder = AlertsBuilder()

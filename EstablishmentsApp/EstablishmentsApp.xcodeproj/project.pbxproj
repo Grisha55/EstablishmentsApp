@@ -37,13 +37,19 @@
 		BE9E8C5428BB8B980083EDAA /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5328BB8B980083EDAA /* RegistrationPresenter.swift */; };
 		BE9E8C5628BB8ECD0083EDAA /* SMSCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5528BB8ECD0083EDAA /* SMSCodePresenter.swift */; };
 		BE9E8C5828BB968A0083EDAA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5728BB968A0083EDAA /* TabBarController.swift */; };
+		BE9E8C5A28BB9AC90083EDAA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E8C5928BB9AC90083EDAA /* MapViewController.swift */; };
 		BEA7584928BA04A80009DCFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584828BA04A80009DCFF /* AuthManager.swift */; };
 		BEA7584B28BA0A520009DCFF /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */; };
 		BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */; };
 		BEA7584F28BA31350009DCFF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7584E28BA31350009DCFF /* CustomTextField.swift */; };
+		BEE2782228BBC26F00E771EA /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2782128BBC26F00E771EA /* MapViewPresenter.swift */; };
+		DEAE6A433E979BCE0711887D /* Pods_EstablishmentsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1664EE0D7A9E905A5F0E29 /* Pods_EstablishmentsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F226799C66D21FC7A75103D /* Pods-EstablishmentsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstablishmentsApp.release.xcconfig"; path = "Target Support Files/Pods-EstablishmentsApp/Pods-EstablishmentsApp.release.xcconfig"; sourceTree = "<group>"; };
+		4C374C58889763C3B08DB162 /* Pods-EstablishmentsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstablishmentsApp.debug.xcconfig"; path = "Target Support Files/Pods-EstablishmentsApp/Pods-EstablishmentsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BA1664EE0D7A9E905A5F0E29 /* Pods_EstablishmentsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstablishmentsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4793B128B952D2006EAC7E /* EstablishmentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstablishmentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4793B428B952D2006EAC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE4793B628B952D2006EAC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,10 +74,12 @@
 		BE9E8C5328BB8B980083EDAA /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		BE9E8C5528BB8ECD0083EDAA /* SMSCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodePresenter.swift; sourceTree = "<group>"; };
 		BE9E8C5728BB968A0083EDAA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		BE9E8C5928BB9AC90083EDAA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BEA7584828BA04A80009DCFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
 		BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsViewController.swift; sourceTree = "<group>"; };
 		BEA7584E28BA31350009DCFF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		BEE2782128BBC26F00E771EA /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,17 +95,37 @@
 				BE4793DA28B957DC006EAC7E /* FirebaseStorage in Frameworks */,
 				BE4793CE28B957DC006EAC7E /* FirebaseAuth in Frameworks */,
 				BE4793D628B957DC006EAC7E /* FirebaseFirestore in Frameworks */,
+				DEAE6A433E979BCE0711887D /* Pods_EstablishmentsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271A7F4210B9C9DB67F808A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA1664EE0D7A9E905A5F0E29 /* Pods_EstablishmentsApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35B42D9B255552B622858EC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C374C58889763C3B08DB162 /* Pods-EstablishmentsApp.debug.xcconfig */,
+				2F226799C66D21FC7A75103D /* Pods-EstablishmentsApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE4793A828B952D1006EAC7E = {
 			isa = PBXGroup;
 			children = (
 				BE4793B328B952D2006EAC7E /* EstablishmentsApp */,
 				BE4793B228B952D2006EAC7E /* Products */,
+				35B42D9B255552B622858EC7 /* Pods */,
+				271A7F4210B9C9DB67F808A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +166,7 @@
 				BEA7584A28BA0A520009DCFF /* SMSCodeViewController.swift */,
 				BEA7584C28BA0A670009DCFF /* EstablishmentsViewController.swift */,
 				BE9E8C5728BB968A0083EDAA /* TabBarController.swift */,
+				BE9E8C5928BB9AC90083EDAA /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,6 +227,7 @@
 				BE9E8C5328BB8B980083EDAA /* RegistrationPresenter.swift */,
 				BE9E8C5528BB8ECD0083EDAA /* SMSCodePresenter.swift */,
 				BE9E8C3F28BB7A4C0083EDAA /* EstablishmentsPresenter.swift */,
+				BEE2782128BBC26F00E771EA /* MapViewPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -230,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE4793C528B952D4006EAC7E /* Build configuration list for PBXNativeTarget "EstablishmentsApp" */;
 			buildPhases = (
+				A9AFF66191A8D5D177DCD420 /* [CP] Check Pods Manifest.lock */,
 				BE4793AD28B952D2006EAC7E /* Sources */,
 				BE4793AE28B952D2006EAC7E /* Frameworks */,
 				BE4793AF28B952D2006EAC7E /* Resources */,
+				41E66E7120A1C1E7AAAA0840 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,6 +334,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41E66E7120A1C1E7AAAA0840 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EstablishmentsApp/Pods-EstablishmentsApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EstablishmentsApp/Pods-EstablishmentsApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EstablishmentsApp/Pods-EstablishmentsApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9AFF66191A8D5D177DCD420 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EstablishmentsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE4793AD28B952D2006EAC7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -314,8 +388,10 @@
 				BE4808C628BA81A200277730 /* Timer+extension.swift in Sources */,
 				BE9E8C5828BB968A0083EDAA /* TabBarController.swift in Sources */,
 				BE4793B928B952D2006EAC7E /* RegistrationViewController.swift in Sources */,
+				BE9E8C5A28BB9AC90083EDAA /* MapViewController.swift in Sources */,
 				BE9E8C4728BB7DAE0083EDAA /* EstablishmentsRequest.swift in Sources */,
 				BE9E8C4028BB7A4C0083EDAA /* EstablishmentsPresenter.swift in Sources */,
+				BEE2782228BBC26F00E771EA /* MapViewPresenter.swift in Sources */,
 				BE9E8C5428BB8B980083EDAA /* RegistrationPresenter.swift in Sources */,
 				BE9E8C4328BB7D5C0083EDAA /* DataResponseError.swift in Sources */,
 				BEA7584D28BA0A670009DCFF /* EstablishmentsViewController.swift in Sources */,
@@ -463,6 +539,7 @@
 		};
 		BE4793C628B952D4006EAC7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C374C58889763C3B08DB162 /* Pods-EstablishmentsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +567,7 @@
 		};
 		BE4793C728B952D4006EAC7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F226799C66D21FC7A75103D /* Pods-EstablishmentsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
