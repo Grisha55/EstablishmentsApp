@@ -29,6 +29,7 @@ class MapViewController: UIViewController {
     let camera = GMSCameraPosition.camera(withLatitude: 31.35, longitude: 51.234, zoom: 8.0)
     mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
     view.addSubview(mapView)
+    mapView.delegate = self
   }
   
   private func createMarkers() {
@@ -44,4 +45,16 @@ class MapViewController: UIViewController {
     }
   }
 
+}
+
+// MARK: - GMSMapViewDelegate
+extension MapViewController: GMSMapViewDelegate {
+  
+  func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+    mapPresenter.getMenu()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+      print(self.mapPresenter.menuModels)
+    }
+    return true
+  }
 }

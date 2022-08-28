@@ -8,7 +8,7 @@
 import Foundation
 
 protocol EstablishmentsPresenterProtocol: AnyObject {
-  
+  func getEstablishments()
 }
 
 class EstablishmentsPresenter: EstablishmentsPresenterProtocol {

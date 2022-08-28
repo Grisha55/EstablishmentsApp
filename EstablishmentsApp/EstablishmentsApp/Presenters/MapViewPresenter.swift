@@ -9,29 +9,48 @@ import Foundation
 
 protocol MapViewPresenterProtocol: AnyObject {
   func getEstablishmentsCoordinates()
+  func getMenu()
   var establishments: [EstablishModel] { get }
+  var menuModels: [MenuModel] { get }
 }
 
 class MapViewPresenter: MapViewPresenterProtocol {
   
   // MARK: - Properties
-  private var request: EstablishmentsRequest
+  private var establishmentsRequest: EstablishmentsRequest
+  private var menuRequest: MenuRequest
   private var client: StackExchangeClientProtocol
   private var alertsBuilder: AlertsBuilderProtocol
   private var view: MapViewController
   var establishments: [EstablishModel] = []
+  var menuModels: [MenuModel] = []
   
   // MARK: - Init
-  init(request: EstablishmentsRequest, client: StackExchangeClientProtocol, alertsBuilder: AlertsBuilderProtocol, view: MapViewController) {
-    self.request = request
+  init(establishmentsRequest: EstablishmentsRequest, menuRequest: MenuRequest, client: StackExchangeClientProtocol, alertsBuilder: AlertsBuilderProtocol, view: MapViewController) {
+    self.establishmentsRequest = establishmentsRequest
+    self.menuRequest = menuRequest
     self.client = client
     self.alertsBuilder = alertsBuilder
     self.view = view
   }
   
   // MARK: - Methods
+  func getMenu() {
+    client.getMenu(with: menuRequest) { [weak self] (result) in
+      switch result {
+      case .failure(let error):
+        guard let alert = self?.alertsBuilder.buildCancelAlert(with: error.reason, handler: nil) else { return }
+        self?.view.present(alert, animated: true, completion: nil)
+      case .success(let menuModels):
+        DispatchQueue.main.async {
+          self?.menuModels = menuModels
+        }
+      }
+    }
+  }
+  
   func getEstablishmentsCoordinates() {
-    client.getEstablishments(with: request) { [weak self] (result) in
+    client.getEstablishments(with: establishmentsRequest) { [weak self] (result) in
       switch result {
       case .failure(let error):
         guard let alert = self?.alertsBuilder.buildCancelAlert(with: error.reason, handler: nil) else { return }

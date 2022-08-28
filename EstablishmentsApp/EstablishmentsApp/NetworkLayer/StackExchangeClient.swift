@@ -9,6 +9,7 @@ import Foundation
 
 protocol StackExchangeClientProtocol: AnyObject {
   func getEstablishments(with request: EstablishmentsRequest, completion: @escaping (Result<[EstablishModel] , DataResponseError>) -> Void)
+  func getMenu(with request: MenuRequest, completion: @escaping (Result<[MenuModel], DataResponseError>) -> Void)
 }
 
 final class StackExchangeClient: StackExchangeClientProtocol {
@@ -20,6 +21,29 @@ final class StackExchangeClient: StackExchangeClientProtocol {
   
   init(session: URLSession = URLSession.shared) {
     self.session = session
+  }
+  
+  func getMenu(with request: MenuRequest, completion: @escaping (Result<[MenuModel], DataResponseError>) -> Void) {
+    
+    let urlRequest = URLRequest(url: baseURL.appendingPathComponent(request.path))
+    
+    session.dataTask(with: urlRequest) { data, response, error in
+      guard
+        let httpResponse = response as? HTTPURLResponse,
+        httpResponse.hasSuccessStatusCode,
+        let data = data
+      else {
+        completion(Result.failure(DataResponseError.network))
+        return
+      }
+      
+      guard let decodedResponse = try? JSONDecoder().decode([MenuModel].self, from: data) else {
+        completion(Result.failure(DataResponseError.decoding))
+        return
+      }
+      
+      completion(Result.success(decodedResponse))
+    }.resume()
   }
   
   func getEstablishments(with request: EstablishmentsRequest, completion: @escaping (Result<[EstablishModel], DataResponseError>) -> Void) {
